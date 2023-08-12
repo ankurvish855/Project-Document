@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redokit- Learning App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a href="#" class="logo">Redokit</a>
+        <ul class="navigation">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <body class="image_src">
+      <center>
+    <img src = " C:\Users\HP\Downloads\WhatsApp Image 2023-06-21 at 10.32.23 PM.jpeg" height="500px" width="700px">
+    </center>
+    </body>   
+    <div class="hero">
+      <div class="container">
+        <h1>Transforming the way<br>students learn</h1>
+        <p>Engaging video lessons. Personalized learning. Expert teachers. Get the best education experience with Redokit.</p>
+        <a href="#" class="btn">Start Learning</a>
+      </div>
+    </div>
+  </header>
+  
+  <section id="courses">
+    <div class="container">
+      <h2>Popular Courses</h2>
+      <div class="course-card">
+        <img src="C:\Users\HP\Downloads\quiz.jpg" height="100px" width="100px" alt="Course 1">
+        <h3></h3>
+        <p>Take an quiz.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-card">
+        <img src="C:\Users\HP\Downloads\WhatsApp Image 2023-06-21 at 11.49.44 PM.jpeg"height="100px" width="100px" alt="Course 2">
+        <h3></h3>
+        <p>Books and Study material.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-card">
+        <img src="" alt="Course 3">
+        <h3>Course 3</h3>
+        <p>.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="about">
+    <div class="container">
+      <h2>About Redokit</h2>
+      <p>Redokit is a growing educational technology company that offers personalized learning experiences to students through engaging videos, interactive quizzes, and live classes. We aim to make learning fun, accessible, and effective for students of all ages.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </section>
+  
+  <section id="contact">
+    
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Redokit. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+<style>
+
+body, h1, h2, h3, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  background-image:url("C:\Users\HP\Downloads\WhatsApp Image 2023-06-21 at 10.32.23 PM.jpeg");
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+.logo:hover{
+  background-color: rgb(237, 240, 242);
+        border-width: 10px;
+
+}
+
+.navigation {
+  list-style-type: none;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navigation li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  background-image: "C:\Users\HP\Downloads\WhatsApp Image 2023-06-21 at 10.32.23 PM.jpeg";
+  margin-top: 20px;
+}
+.btn:hover{
+  opacity: 0.8;
+
+
+
+
+}
+
+#courses {
+  padding: 50px 0;
+  text-align: center;
+}
+
+
+.course-card { 
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+#about {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+</style>

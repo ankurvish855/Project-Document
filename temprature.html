@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Convertor</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Temperature Convertor </h2>
+        <form id="calcTemp" onsubmit="calculateTemp(); return false">
+            <label for="temp"><p>Enter the unit of temprature to convert</p></label>
+            <br>
+            <input type="number" name="temp" id="temp" value="0">
+            <select name="temp_diff" id="temp_diff">
+                <option value="cel">&#176;Celsius</option>
+                <option value="fah">&#176;Fahrenheit</option>
+            </select>
+            <br>
+            <button class="white" name="temp" id="submit"> Convert </button>
+            <br>
+            <span id="result"></span>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    const calculateTemp = () => {
+    const inputTemp = document.getElementById('temp').value;
+
+    const tempSelected = document.getElementById('temp_diff');
+    const valueTemp = temp_diff.options[tempSelected.selectedIndex].value;
+
+    // Celsius to Fahrenheit
+    const celToFah = (cel) => {
+        let fahrenheit = ((cel * 9 / 5) + 32).toFixed(1);
+        return fahrenheit;
+    }
+
+    // Fahrenheit to Celsius
+    const fahToCel = (fah) => {
+        let celsius = ((fah - 32) * 5 / 9).toFixed(1);
+        return celsius;
+    }
+
+    if (valueTemp == 'cel') {
+        document.getElementById("result").innerHTML = celToFah(inputTemp) + "&#176; Fahrenheit";
+    }
+    else {
+        document.getElementById("result").innerHTML = fahToCel(inputTemp) + "&#176; Celsius";
+    }
+}
+</script>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: rgb(27, 24, 24);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+p{
+    color:rgb(6, 3, 20);
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding:11px 18px;
+    color:orangered;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid orangered;
+    outline: none;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+button.hover{
+    box-shadow: 5px 5px 5px rgb(22, 13, 13 , 0.15);
+}
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    background-color: rgb(12, 238, 227);
+    
+
+}
+  
+.container button:hover{
+    background:white;
+    color:black;
+    border-radius: 5px;
+}
+
+
+
+.container{
+    border:1px solid black;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    width:400px;
+    height: 400px;
+    border-radius: 10px;
+    
+}
+
+#result{
+    color:black;
+    background-color: #7638d3;
+    padding: 5px ;
+    font-size: 15px;
+    font-weight: 600;
+}
+</style>
